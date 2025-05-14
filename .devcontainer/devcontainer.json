@@ -1,0 +1,26 @@
+{
+  "name": "ubuntu",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "installZsh": "true",
+      "configureZshAsDefaultShell": "true",
+      "installOhMyZsh": "true",
+      "installOhMyZshConfig": "true"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "terminal.integrated.defaultProfile.linux": "zsh",
+      "terminal.integrated.profiles.linux": {
+        "zsh": {
+          "path": "/usr/bin/zsh"
+        }
+      },
+      "extensions":[]
+    }
+  },
+  "postCreateCommand": "/usr/bin/zsh /workspaces/install.sh"
+
+}
