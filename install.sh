@@ -17,14 +17,10 @@ git clone https://github.com/zsh-users/zsh-autosuggestions.git $HOME/.oh-my-zsh/
 
 curl -sS https://starship.rs/install.sh | sh -s -- -y
 
-
-
 ## OH-MY-ZSH - POWERLEVEL10K SETTINGS ##
 #git clone https://github.com/romkatv/powerlevel10k.git $HOME/.oh-my-zsh/custom/themes/powerlevel10k --depth=1
 #ln -s $HOME/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel10k.zsh-theme $HOME/.oh-my-zsh/custom/themes/powerlevel10k.zsh-theme
 
-
-#echo "$(cat $HOME/.zshrc)" | awk '{gsub(/ZSH_THEME=\"devcontainers\"/, "ZSH_THEME=\"codespace\"")}1' > $HOME/.zshrc.replaced && mv $HOME/.zshrc.replaced $HOME/.zshrc
 echo "$(cat $HOME/.zshrc)" | awk '{gsub(/plugins=\(git\)/, "plugins=(git zsh-completions zsh-syntax-highlighting zsh-autosuggestions)")}1' > $HOME/.zshrc.replaced && mv $HOME/.zshrc.replaced $HOME/.zshrc
 
 # ADDITIONS

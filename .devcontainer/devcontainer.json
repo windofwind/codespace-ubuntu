@@ -21,6 +21,6 @@
       "extensions":[]
     }
   },
-  "postCreateCommand": ""
+  "postCreateCommand": "zsh ./install.sh"
 
 }
