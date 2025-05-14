@@ -21,6 +21,6 @@
       "extensions":[]
     }
   },
-  "postCreateCommand": "/usr/bin/zsh /workspaces/install.sh"
+  "postCreateCommand": ""
 
 }

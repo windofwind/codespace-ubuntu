@@ -18,11 +18,14 @@ git clone https://github.com/zsh-users/zsh-autosuggestions.git $HOME/.oh-my-zsh/
 curl -sS https://starship.rs/install.sh | sh -s -- -y
 
 
-echo "$(cat $HOME/.zshrc)" | awk '{gsub(/plugins=\(git\)/, "plugins=(git zsh-completions zsh-syntax-highlighting zsh-autosuggestions)")}1' > $HOME/.zshrc.replaced && mv $HOME/.zshrc.replaced $HOME/.zshrc
 echo "
 # Starts starship
 eval \"$(starship init zsh)\"
 " >> $HOME/.zshrc
 
+echo "$(cat $HOME/.zshrc)" | awk '{gsub(/plugins=\(git\)/, "plugins=(git zsh-completions zsh-syntax-highlighting zsh-autosuggestions)")}1' > $HOME/.zshrc.replaced && mv $HOME/.zshrc.replaced $HOME/.zshrc
+
 # Change the default shell to zsh
 sudo chsh -s "$ZSH_PATH"
+
+source $ZSH_PATH
